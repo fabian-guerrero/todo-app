@@ -1,0 +1,29 @@
+// Primary
+$bright-blue: hsl(220, 98%, 61%);
+$check-background: linear-gradient(
+    130deg,
+    hsl(192deg 100% 67%) 0%,
+    hsl(202deg 99% 67%) 11%,
+    hsl(212deg 96% 66%) 22%,
+    hsl(221deg 95% 66%) 33%,
+    hsl(231deg 94% 66%) 44%,
+    hsl(241deg 93% 66%) 56%,
+    hsl(251deg 91% 66%) 67%,
+    hsl(261deg 90% 65%) 78%,
+    hsl(270deg 88% 65%) 89%,
+    hsl(280deg 87% 65%) 100%
+  );
+
+// Light Theme
+$very-light-gray: hsl(0, 0%, 98%);
+$very-light-grayish-blue: hsl(236, 33%, 92%);
+$light-grayish-blue: hsl(233, 11%, 84%);
+$dark-grayish-blue: hsl(236, 9%, 61%);
+$very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+// Dark Theme
+$very-dark-blue: hsl(235, 21%, 11%);
+$very-dark-desaturated-blue: hsl(235, 24%, 19%);
+$light-grayish-blue: hsl(234, 39%, 85%);
+$dark-grayish-blue: hsl(234, 11%, 52%);
+$very-dark-grayish-blue: hsl(233, 14%, 35%);
