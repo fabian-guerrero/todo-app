@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles/style.scss" />
     <script type="module" src="scripts/app.js"></script>
 </head>
-<body>
-    <div class="main-wrapper">
+<body id="main-body">
+    <div id="main-wrapper" class="main-wrapper">
         <picture class="heading-image">
             <source srcset="images/bg-desktop-light.jpg"  media="all" type="image/jpeg">
             <img src="images/bg-desktop-dark.jpg" alt="">
@@ -16,66 +16,33 @@
         <div class="content-wrapper">
             <div class="title-wrapper">
                 <p class="title">Todo</p>
-                <div class="theme-toggler">
+                <div id="theme-toggler" class="theme-toggler">
                     <img class="light-selector" src="images/icon-sun.svg">
                     <img class="dark-selector" src="images/icon-moon.svg">
                 </div>
             </div>
-            <div class="input-wrapper">
+            <div class="input-wrapper adding-item">
+                <!-- Add/Remove completed class -->
                 <div class="add-todo-wrapper">
-                    <div class="add-todo checked">
+                    <!-- Add/Remove checked class -->
+                    <div id="add-todo" class="add-todo">
                         <img class="icon-check" src="images/icon-check.svg">
+                        <span class="white-background"></span>
                     </div>
                 </div>
-                <input type="text" class="todo-input" placeholder="Create a new todo...">
+                <input id="todo-input" type="text" class="todo-input" placeholder="Create a new todo...">
             </div>
             <div class="todos-wrapper">
-                <div class="todos-list">
-                    <div class="todo-item completed">
-                        <div class="add-todo-wrapper">
-                            <div class="add-todo checked">
-                                <img class="icon-check" src="images/icon-check.svg">
-                                <span class="white-background"></span>
-                            </div>
-                        </div>
-                        <div class="text-clear-wrapper">
-                            <p class="todo-text">10 minutes meditation</p>
-                            <img class="icon-clear" src="images/icon-cross.svg">
-                        </div>
-                    </div>
-                    <div class="todo-item">
-                        <div class="add-todo-wrapper">
-                            <div class="add-todo">
-                                <img class="icon-check" src="images/icon-check.svg">
-                                <span class="white-background"></span>
-                            </div>
-                        </div>
-                        <div class="text-clear-wrapper">
-                            <p class="todo-text">10 minutes meditation</p>
-                            <img class="icon-clear" src="images/icon-cross.svg">
-                        </div>
-                    </div>  
-                    <div class="todo-item">
-                        <div class="add-todo-wrapper">
-                            <div class="add-todo">
-                                <img class="icon-check" src="images/icon-check.svg">
-                                <span class="white-background"></span>
-                            </div>
-                        </div>
-                        <div class="text-clear-wrapper">
-                            <p class="todo-text">10 minutes meditation</p>
-                            <img class="icon-clear" src="images/icon-cross.svg">
-                        </div>
-                    </div>              
+                <div id="todos-list" class="todos-list">           
                 </div>
-                <div class="information-wrapper">
-                    <p class="items-left">5 items left</p>
+                <div id="information-wrapper" class="information-wrapper hide">
+                    <p class="items-left"><span id="items-left">1</span> items left</p>
                     <div class="items-filters">
-                        <p class="selected">All</p>
-                        <p>Active</p>
-                        <p>Completed</p>
+                        <p id="show-all" class="selected">All</p>
+                        <p id="show-active">Active</p>
+                        <p id="show-completed">Completed</p>
                     </div>
-                    <p class="items-clear">Clear completed</p>
+                    <p id="clear-completed" class="items-clear">Clear completed</p>
                 </div>
             </div>
         </div>

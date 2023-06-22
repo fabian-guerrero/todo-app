@@ -5,6 +5,10 @@
 body{
     background-color: $very-light-gray;
     margin: 0;
+
+    &.black-theme{
+        background-color: $very-dark-blue;
+    }
 }
 
 p{
@@ -55,6 +59,16 @@ p{
         position: absolute;
         top: 0;
         left: 0;
+
+        .black-theme &{
+            opacity: 1;
+        }
+    }
+
+    .dark-selector{
+        .black-theme &{
+            opacity: 0;
+        }
     }
 }
 
@@ -67,6 +81,10 @@ p{
     margin-top: 50px;
     padding: 20px 25px;
     justify-content: space-between;
+
+    .black-theme &{
+        background-color: $very-dark-desaturated-blue;
+    }
 }
 
 .add-todo-wrapper{
@@ -82,6 +100,12 @@ p{
             background: $check-background;
         }
     }
+
+    &.completed{
+        .white-background{
+            opacity: 0;
+        }
+    }
 }
 
 .add-todo{
@@ -94,6 +118,10 @@ p{
     align-items: center;
     justify-content: center;
 
+    .black-theme &{
+        background-color: $very-dark-grayish-blue;
+    }
+
     &.checked {
         background: $check-background;
     }
@@ -104,6 +132,11 @@ p{
         background-color: #ffffff;
         position: absolute;
         border-radius: 50%;
+        pointer-events: none;
+
+        .black-theme &{
+            background-color: $very-dark-desaturated-blue;
+        }
     }
 }
 
@@ -117,6 +150,10 @@ p{
 .todos-wrapper{
     background-color: #ffffff;
     border-radius: 10px;
+
+    .black-theme &{
+        background-color: $very-dark-desaturated-blue;
+    }
 }
 
 .todos-list{
@@ -141,15 +178,18 @@ p{
         }
     }
 
+    .black-theme &{
+        border-bottom: 1px solid $very-dark-grayish-blue;
+    }
+
     &.completed{
         .white-background{
             opacity: 0;
         }
+        .todo-text{
+            text-decoration: line-through;
+        }
     }
-
-    // .add-todo{
-    //     background: $very-light-grayish-blue;
-    // }
 
     .add-todo, .todo-text, .icon-clear {
         cursor: pointer;
@@ -173,6 +213,10 @@ p{
 
     p{
         font-size: 16px;
+    }
+
+    &.hide{
+        display: none;
     }
 }
 
@@ -213,4 +257,12 @@ p{
 
 .icon-clear{
     opacity: 0;
+}
+
+.icon-check{
+    pointer-events: none;
+}
+
+.hide{
+    display: none;
 }
