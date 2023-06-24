@@ -5,6 +5,9 @@ const addTodoButton = document.getElementById("add-todo");
 const showAllButton = document.getElementById("show-all");
 const showActiveButton = document.getElementById("show-active");
 const showCompletedButton = document.getElementById("show-completed");
+const showAllButtonMobile = document.getElementById("show-all-mobile");
+const showActiveButtonMobile = document.getElementById("show-active-mobile");
+const showCompletedButtonMobile = document.getElementById("show-completed-mobile");
 const clearCompleted = document.getElementById("clear-completed");
 const themeTogglerButton = document.getElementById("theme-toggler");
 let todoInput = document.getElementById("todo-input");
@@ -142,6 +145,9 @@ function showAllTodos(){
     showActiveButton.classList.remove('selected');
     showAllButton.classList.add('selected');
     showCompletedButton.classList.remove('selected');
+    showActiveButtonMobile.classList.remove('selected');
+    showAllButtonMobile.classList.add('selected');
+    showCompletedButtonMobile.classList.remove('selected');
 }
 
 function showActiveTodos(){
@@ -160,6 +166,9 @@ function showActiveTodos(){
     showActiveButton.classList.add('selected');
     showAllButton.classList.remove('selected');
     showCompletedButton.classList.remove('selected');
+    showActiveButtonMobile.classList.add('selected');
+    showAllButtonMobile.classList.remove('selected');
+    showCompletedButtonMobile.classList.remove('selected');
 }
 
 function showCompletedTodos(){
@@ -177,6 +186,9 @@ function showCompletedTodos(){
     showActiveButton.classList.remove('selected');
     showAllButton.classList.remove('selected');
     showCompletedButton.classList.add('selected');
+    showActiveButtonMobile.classList.remove('selected');
+    showAllButtonMobile.classList.remove('selected');
+    showCompletedButtonMobile.classList.add('selected');
 }
 
 function clearCompletedTodos(){
@@ -209,8 +221,11 @@ todoInput.addEventListener("keypress", function(e){
 addTodoButton.addEventListener("click",newTodo);
 todosListWrapper.addEventListener("click",clickedOnItem);
 showAllButton.addEventListener("click",showAllTodos);
+showAllButtonMobile.addEventListener("click",showAllTodos);
 showActiveButton.addEventListener("click",showActiveTodos);
+showActiveButtonMobile.addEventListener("click",showActiveTodos);
 showCompletedButton.addEventListener("click",showCompletedTodos);
+showCompletedButtonMobile.addEventListener("click",showCompletedTodos);
 clearCompleted.addEventListener("click",clearCompletedTodos);
 themeTogglerButton.addEventListener("click",themeToggler);
 showInformationWrapper();
