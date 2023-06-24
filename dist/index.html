@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Mentor TODO App Challenge">
+    <title>Frontend Mentor TODO App</title>
+    <link rel="stylesheet" href="/index.38ec9247.css">
+    <script src="/index.a56319bd.js" defer=""></script>
+</head>
+<body id="main-body">
+    <div id="main-wrapper" class="main-wrapper">
+        <picture class="heading-image light-image">
+            <source srcset="/bg-desktop-light.ee9c4ad2.jpg" media="(min-width: 768px)" type="image/jpeg">
+            <img src="/bg-mobile-light.f3c75e87.jpg" alt="Mobile background" media="(max-width: 767px)">
+        </picture>
+        <picture class="heading-image dark-image">
+            <source srcset="/bg-desktop-dark.7b786ef9.jpg" media="(min-width: 768px)" type="image/jpeg">
+            <img src="/bg-mobile-dark.0155cb8f.jpg" alt="Mobile background" media="(max-width: 767px)">
+        </picture>
+        <div class="content-wrapper">
+            <div class="title-wrapper">
+                <p class="title">Todo</p>
+                <div id="theme-toggler" class="theme-toggler">
+                    <img class="light-selector" src="/icon-sun.2e69e59d.svg" width="26px" height="26px" alt="Light theme selector">
+                    <img class="dark-selector" src="/icon-moon.29939b81.svg" width="26px" height="26px" alt="Dark theme selector">
+                </div>
+            </div>
+            <div class="input-wrapper adding-item">
+                <div class="add-todo-wrapper">
+                    <div id="add-todo" class="add-todo">
+                        <img class="icon-check" src="/icon-check.ba5fb87f.svg" alt="Checked icon" width="11px" height="9px">
+                        <span class="white-background"></span>
+                    </div>
+                </div>
+                <input id="todo-input" type="text" class="todo-input" placeholder="Create a new todo...">
+            </div>
+            <div class="todos-wrapper">
+                <div id="todos-list" class="todos-list">           
+                </div>
+                <div id="information-wrapper" class="information-wrapper hide">
+                    <div class="main-filter">
+                        <p class="items-left"><span id="items-left">1</span> items left</p>
+                        <div class="items-filters">
+                            <p id="show-all" class="selected">All</p>
+                            <p id="show-active">Active</p>
+                            <p id="show-completed">Completed</p>
+                        </div>
+                        <p id="clear-completed" class="items-clear">Clear completed</p>
+                    </div>
+                    <div class="items-filters-mobile">
+                        <p id="show-all-mobile" class="selected">All</p>
+                        <p id="show-active-mobile">Active</p>
+                        <p id="show-completed-mobile">Completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
