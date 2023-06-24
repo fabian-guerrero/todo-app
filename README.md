@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/fabian-guerrero/todo-app
-- Live Site URL: https://fabian-guerrero.github.io/todo-app/dist
+- Solution URL: [https://github.com/fabian-guerrero/todo-app](https://github.com/fabian-guerrero/todo-app)
+- Live Site URL: [https://fabian-guerrero.github.io/todo-app/dist](https://fabian-guerrero.github.io/todo-app/dist)
 
 ## My process
 
