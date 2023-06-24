@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Mentor TODO App Challenge">
     <title>Frontend Mentor TODO App</title>
     <link rel="stylesheet" href="styles/style.scss" />
     <script type="module" src="scripts/app.js"></script>
@@ -11,18 +12,18 @@
     <div id="main-wrapper" class="main-wrapper">
         <picture class="heading-image light-image">
             <source srcset="images/bg-desktop-light.jpg" media="(min-width: 768px)" type="image/jpeg">
-            <img src="images/bg-mobile-light.jpg" alt="" media="(max-width: 767px)">
+            <img src="images/bg-mobile-light.jpg" alt="Mobile background" media="(max-width: 767px)">
         </picture>
         <picture class="heading-image dark-image">
             <source srcset="images/bg-desktop-dark.jpg" media="(min-width: 768px)" type="image/jpeg">
-            <img src="images/bg-mobile-dark.jpg" alt="" media="(max-width: 767px)">
+            <img src="images/bg-mobile-dark.jpg" alt="Mobile background" media="(max-width: 767px)">
         </picture>
         <div class="content-wrapper">
             <div class="title-wrapper">
                 <p class="title">Todo</p>
                 <div id="theme-toggler" class="theme-toggler">
-                    <img class="light-selector" src="images/icon-sun.svg">
-                    <img class="dark-selector" src="images/icon-moon.svg">
+                    <img class="light-selector" src="images/icon-sun.svg" width="26px" height="26px" alt="Light theme selector">
+                    <img class="dark-selector" src="images/icon-moon.svg" width="26px" height="26px" alt="Dark theme selector">
                 </div>
             </div>
             <div class="input-wrapper adding-item">
@@ -30,7 +31,7 @@
                 <div class="add-todo-wrapper">
                     <!-- Add/Remove checked class -->
                     <div id="add-todo" class="add-todo">
-                        <img class="icon-check" src="images/icon-check.svg">
+                        <img class="icon-check" src="images/icon-check.svg" alt="Checked icon" width="11px" height="9px">
                         <span class="white-background"></span>
                     </div>
                 </div>

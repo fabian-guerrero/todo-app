@@ -26,13 +26,13 @@ function loadFromLocalStorage(todoTask){
     let loadTodo =`<div id=${todoTask.id} class="todo-item ${todoTask.isCompleted ? "completed" : ""}" data-status=${todoTask.isCompleted ? "completed" : "incomplete"}>
             <div class="add-todo-wrapper">
                 <div class="add-todo ${todoTask.isCompleted ? "checked" : "" }">
-                    <img class="icon-check" src=${iconCheck}>
+                    <img class="icon-check" src=${iconCheck} alt="Checked icon" width="11px" height="9px">
                     <span class="white-background"></span>
                 </div>
             </div>
             <div class="text-clear-wrapper">
                 <p class="todo-text">${todoTask.taskName}</p>
-                <img class="icon-clear" src=${iconCross}>
+                <img class="icon-clear" src=${iconCross} alt="clear icon" width="18px" height="18px">
             </div>
         </div>`
 
@@ -74,13 +74,13 @@ function createTodo(todoTask){
     let todoMarkup =`<div id=${todoTask.id} class="todo-item" data-status="incomplete">
         <div class="add-todo-wrapper">
             <div class="add-todo">
-                <img class="icon-check" src=${iconCheck}>
+                <img class="icon-check" src=${iconCheck} alt="Checked icon" width="11px" height="9px">
                 <span class="white-background"></span>
             </div>
         </div>
         <div class="text-clear-wrapper">
             <p class="todo-text">${todoTask.taskName}</p>
-            <img class="icon-clear" src=${iconCross}>
+            <img class="icon-clear" src=${iconCross} alt="Clear icon" width="18px" height="18px">
         </div>
     </div>`
 
