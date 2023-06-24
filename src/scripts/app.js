@@ -68,7 +68,6 @@ function newTodo(){
 }
 
 function createTodo(todoTask){
-    console.log(todoTask);
     let todoMarkup =`<div id=${todoTask.id} class="todo-item" data-status="incomplete">
         <div class="add-todo-wrapper">
             <div class="add-todo">
