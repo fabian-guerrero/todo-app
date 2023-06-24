@@ -1,8 +1,17 @@
 {
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel src/index.html --open",
+    "build": "parcel build --public-url ./ src/index.html"
+  },
+  "customDistStructure": {
+    "config": {
+      ".js": "scripts",
+      ".css": "styles"
+    },
+    "options": {
+      "development": true
+    }
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.2",
