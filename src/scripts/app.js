@@ -36,7 +36,7 @@ function loadFromLocalStorage(todoTask){
     todosListWrapper.insertAdjacentHTML("afterbegin",loadTodo);
 }
 
-function addTodo(){
+function newTodo(){
     addTodoButton.parentElement.classList.add('completed');
     addTodoButton.classList.add('checked');
     let todoInputValue = todoInput.value.replace(/\s+/g, ' ').trim();
@@ -53,21 +53,7 @@ function addTodo(){
             isCompleted: false
         };
 
-        let newTodo =`<div id=${todoTask.id} class="todo-item" data-status="incomplete">
-            <div class="add-todo-wrapper">
-                <div class="add-todo">
-                    <img class="icon-check" src=${iconCheck}>
-                    <span class="white-background"></span>
-                </div>
-            </div>
-            <div class="text-clear-wrapper">
-                <p class="todo-text">${todoInputValue}</p>
-                <img class="icon-clear" src=${iconCross}>
-            </div>
-        </div>`
-
-        todosListWrapper.insertAdjacentHTML("afterbegin",newTodo);
-
+        createTodo(todoTask);
         showInformationWrapper();
 
         savedTodos.push(todoTask);
@@ -79,6 +65,24 @@ function addTodo(){
             todoInput.value="";
         }, 500);
     }
+}
+
+function createTodo(todoTask){
+    console.log(todoTask);
+    let todoMarkup =`<div id=${todoTask.id} class="todo-item" data-status="incomplete">
+        <div class="add-todo-wrapper">
+            <div class="add-todo">
+                <img class="icon-check" src=${iconCheck}>
+                <span class="white-background"></span>
+            </div>
+        </div>
+        <div class="text-clear-wrapper">
+            <p class="todo-text">${todoTask.taskName}</p>
+            <img class="icon-clear" src=${iconCross}>
+        </div>
+    </div>`
+
+    todosListWrapper.insertAdjacentHTML("afterbegin",todoMarkup);
 }
 
 function clickedOnItem(e){
@@ -196,7 +200,14 @@ function themeToggler(){
     mainbody.classList.toggle('black-theme');
 }
 
-addTodoButton.addEventListener("click",addTodo);
+todoInput.addEventListener("keypress", function(e){
+    if (e.key === "Enter") {
+        e.preventDefault();
+        newTodo();
+      }
+});
+
+addTodoButton.addEventListener("click",newTodo);
 todosListWrapper.addEventListener("click",clickedOnItem);
 showAllButton.addEventListener("click",showAllTodos);
 showActiveButton.addEventListener("click",showActiveTodos);
