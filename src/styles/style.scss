@@ -121,9 +121,19 @@ p{
 
     &:hover{
         .add-todo{
-            background: $check-background;
+            background-color: transparent;
         }
     }
+
+    &::before{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        background: $check-background;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+}
 
     &.completed{
         .white-background{
@@ -137,10 +147,11 @@ p{
     height: 25px;
     border-radius: 50%;
     position: relative;
-    background: $very-light-grayish-blue;
+    background-color: $very-light-grayish-blue;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--background-color-transition);
 
     .black-theme &{
         background-color: $very-dark-grayish-blue;
