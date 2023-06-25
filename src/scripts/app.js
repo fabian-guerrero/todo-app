@@ -10,10 +10,10 @@ const showActiveButtonMobile = document.getElementById("show-active-mobile");
 const showCompletedButtonMobile = document.getElementById("show-completed-mobile");
 const clearCompleted = document.getElementById("clear-completed");
 const themeTogglerButton = document.getElementById("theme-toggler");
-let todoInput = document.getElementById("todo-input");
-let todosListWrapper = document.getElementById("todos-list");
-let informationWrapper = document.getElementById("information-wrapper");
-let itemsLeft = document.getElementById("items-left");
+const todoInput = document.getElementById("todo-input");
+const todosListWrapper = document.getElementById("todos-list");
+const informationWrapper = document.getElementById("information-wrapper");
+const itemsLeft = document.getElementById("items-left");
 let savedTodos = JSON.parse(localStorage.getItem("savedTodos")) || [];
 
 if (localStorage.getItem("savedTodos")) {
@@ -204,6 +204,7 @@ function clearCompletedTodos(){
 
     let activeCount = document.querySelectorAll('[data-status="incomplete"]');
     itemsLeft.innerHTML = activeCount.length;
+    showInformationWrapper();
 }
 
 function themeToggler(){
